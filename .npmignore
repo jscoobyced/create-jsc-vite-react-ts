@@ -1,0 +1,19 @@
+# Exclude everything from npm package except what's needed
+node_modules
+dist
+coverage
+.vite
+.git
+.gitignore
+.DS_Store
+*.log
+
+# Template files to exclude
+template/node_modules
+template/dist
+template/coverage
+template/.vite
+
+# Development files
+.vscode
+.idea

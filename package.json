@@ -1,0 +1,47 @@
+{
+  "name": "create-jsc-vite-react-ts",
+  "version": "1.0.0",
+  "description": "Create a modern React app with TypeScript, Vite, Tailwind CSS, and Vitest",
+  "type": "module",
+  "bin": {
+    "create-create-jsc-vite-react-ts": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "template"
+  ],
+  "keywords": [
+    "react",
+    "vite",
+    "typescript",
+    "tailwindcss",
+    "vitest",
+    "starter",
+    "template",
+    "boilerplate",
+    "scaffolding",
+    "create-app"
+  ],
+  "author": "JScoobyCed",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jscoobyced/create-jsc-vite-react-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jscoobyced/create-jsc-vite-react-ts/issues"
+  },
+  "homepage": "https://github.com/jscoobyced/create-jsc-vite-react-ts#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "fs-extra": "^11.2.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/prompts": "^2.4.9"
+  }
+}
