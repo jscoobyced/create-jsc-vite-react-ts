@@ -1,6 +1,6 @@
 {
   "name": "create-jsc-vite-react-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a modern React app with TypeScript, Vite, Tailwind CSS, and Vitest",
   "type": "module",
   "bin": {

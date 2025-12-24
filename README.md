@@ -1,4 +1,4 @@
-# create-vite-react-ts
+# create-jsc-vite-react-ts
 
 A CLI tool to scaffold modern React applications with TypeScript, Vite, Tailwind CSS, and Vitest pre-configured.
 
@@ -8,13 +8,13 @@ Create a new project using npm, yarn, or pnpm:
 
 ```bash
 # npm
-npm create vite-react-ts my-app
+npm create jsc-vite-react-ts my-app
 
 # yarn
-yarn create vite-react-ts my-app
+yarn create jsc-vite-react-ts my-app
 
 # pnpm
-pnpm create vite-react-ts my-app
+pnpm create jsc-vite-react-ts my-app
 ```
 
 Then navigate to your project and start developing:
