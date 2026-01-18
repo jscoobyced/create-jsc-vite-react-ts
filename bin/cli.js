@@ -74,7 +74,8 @@ const run = async () => {
     });
   }
 
-  const packageJsonPath = path.join(targetDir, "frontend", "package.json");
+  const projectDir = path.join(targetDir, "frontend");
+  const packageJsonPath = path.join(projectDir, "package.json");
   const packageJson = fs.readJsonSync(packageJsonPath);
   packageJson.name = projectName;
   fs.writeJsonSync(packageJsonPath, packageJson, { spaces: 2 });
@@ -89,7 +90,7 @@ const run = async () => {
 
   try {
     execSync(`${packageManager} install`, {
-      cwd: targetDir,
+      cwd: projectDir,
       stdio: "inherit",
     });
     console.log(chalk.green("\n✓ Dependencies installed"));

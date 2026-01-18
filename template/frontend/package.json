@@ -15,7 +15,7 @@
     "update-version": "./scripts/update-version.sh",
     "create-tag": "./scripts/create-tag.sh",
     "full-tag": "yarn update-version && yarn create-tag",
-    "prepare": "git init"
+    "prepare": "cd .. && git init --quiet"
   },
   "dependencies": {
     "react": "^19.2.0",
