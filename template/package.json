@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,10 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
-     "format": "prettier --write ."
+    "format": "prettier --write .",
+    "update-version": "./update-version.sh",
+    "create-tag": "./create-tag.sh",
+    "full-tag": "yarn update-version && yarn create-tag"
   },
   "dependencies": {
     "react": "^19.2.0",

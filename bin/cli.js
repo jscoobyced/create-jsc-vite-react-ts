@@ -53,10 +53,20 @@ const run = async () => {
     filter: (src) => {
       const basename = path.basename(src);
       return !["node_modules", "dist", "coverage", "yarn.lock"].includes(
-        basename
+        basename,
       );
     },
   });
+
+  // Make files fromthe "scripts" folder executable
+  const scriptsDir = path.join(targetDir, "scripts");
+  if (fs.existsSync(scriptsDir)) {
+    const scriptFiles = fs.readdirSync(scriptsDir);
+    scriptFiles.forEach((file) => {
+      const filePath = path.join(scriptsDir, file);
+      fs.chmodSync(filePath, 0o755);
+    });
+  }
 
   const packageJsonPath = path.join(targetDir, "package.json");
   const packageJson = fs.readJsonSync(packageJsonPath);
@@ -68,7 +78,7 @@ const run = async () => {
   const packageManager = await detectPackageManager();
 
   console.log(
-    chalk.blue(`\n📦 Installing dependencies with ${packageManager}...\n`)
+    chalk.blue(`\n📦 Installing dependencies with ${packageManager}...\n`),
   );
 
   try {
@@ -79,10 +89,10 @@ const run = async () => {
     console.log(chalk.green("\n✓ Dependencies installed"));
   } catch (error) {
     console.log(
-      chalk.yellow("\n⚠ Failed to install dependencies automatically")
+      chalk.yellow("\n⚠ Failed to install dependencies automatically"),
     );
     console.log(
-      chalk.yellow(`  Please run "${packageManager} install" manually\n`)
+      chalk.yellow(`  Please run "${packageManager} install" manually\n`),
     );
   }
 
