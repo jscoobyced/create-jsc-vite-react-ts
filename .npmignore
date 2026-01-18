@@ -4,7 +4,6 @@ dist
 coverage
 .vite
 .git
-.gitignore
 .DS_Store
 *.log
 
