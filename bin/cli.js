@@ -74,7 +74,7 @@ const run = async () => {
     });
   }
 
-  const packageJsonPath = path.join(targetDir, "package.json");
+  const packageJsonPath = path.join(targetDir, "frontend", "package.json");
   const packageJson = fs.readJsonSync(packageJsonPath);
   packageJson.name = projectName;
   fs.writeJsonSync(packageJsonPath, packageJson, { spaces: 2 });
