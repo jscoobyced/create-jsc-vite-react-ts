@@ -12,8 +12,8 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
     "format": "prettier --write .",
-    "update-version": "./update-version.sh",
-    "create-tag": "./create-tag.sh",
+    "update-version": "./scripts/update-version.sh",
+    "create-tag": "./scripts/create-tag.sh",
     "full-tag": "yarn update-version && yarn create-tag"
   },
   "dependencies": {
