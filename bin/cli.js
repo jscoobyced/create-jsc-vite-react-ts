@@ -99,6 +99,9 @@ const run = async () => {
   console.log(chalk.bold.green("\n✨ Success! Your project is ready.\n"));
   console.log(chalk.bold("Next steps:\n"));
   console.log(chalk.cyan(`  cd ${projectName}`));
+  console.log(chalk.cyan(`  git init`));
+  console.log(chalk.cyan(`  git add .`));
+  console.log(chalk.cyan(`  git commit -m "Initial commit"`));
   console.log(chalk.cyan(`  ${packageManager} dev`));
   console.log();
 };
