@@ -58,6 +58,12 @@ const run = async () => {
     },
   });
 
+  // Rename gitignore file
+  fs.renameSync(
+    path.join(targetDir, "gitignore"),
+    path.join(targetDir, ".gitignore"),
+  );
+
   // Make files fromthe "scripts" folder executable
   const scriptsDir = path.join(targetDir, "scripts");
   if (fs.existsSync(scriptsDir)) {
